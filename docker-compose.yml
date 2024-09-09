@@ -1,0 +1,17 @@
+services:
+  web:
+    build:
+      context: ./web
+    volumes:
+      - ./web:/web
+      - /web/node_modules
+    ports:
+      - "5173:5173"
+
+  api:
+    build:
+      context: ./api
+    volumes:
+      - ./api:/api
+    ports:
+      - "5174:5174"
